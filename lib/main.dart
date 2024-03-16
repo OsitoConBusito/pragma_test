@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pragma_test/app/observes.dart';
 
-void main() => runApp(const MyApp());
+import 'app/app.dart';
+import 'gen/strings.g.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+  runApp(
+    TranslationProvider(
+      child: ProviderScope(
+        observers: [
+          Observers(),
+        ],
+        child: const PragmaApp(),
       ),
-    );
-  }
+    ),
+  );
 }
