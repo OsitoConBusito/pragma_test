@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pragma_test/router/router.dart';
 
 import '../gen/strings.g.dart';
 
@@ -9,7 +10,7 @@ class PragmaApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final router = ref.watch(routerProvider);
+    final router = ref.watch(AppRouter.routerProvider);
 
     return MaterialApp.router(
       locale: TranslationProvider.of(context).flutterLocale,

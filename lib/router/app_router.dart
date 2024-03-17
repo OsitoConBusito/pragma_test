@@ -3,7 +3,7 @@ part of 'router.dart';
 final _key = GlobalKey<NavigatorState>();
 
 class AppRouter {
-  final routerProvider = Provider<GoRouter>(
+  static final routerProvider = Provider<GoRouter>(
     (ref) => GoRouter(
       navigatorKey: _key,
       debugLogDiagnostics: true,
@@ -12,7 +12,7 @@ class AppRouter {
         GoRoute(
           path: splash,
           name: splash,
-          builder: (context, state) => SplashScreen(),
+          builder: (context, state) => const SplashScreen(),
         ),
       ],
     ),
