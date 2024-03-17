@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pragma_test/router/router.dart';
+import 'package:pragma_test/core/navigation/navigation.dart';
 
 import '../gen/strings.g.dart';
 

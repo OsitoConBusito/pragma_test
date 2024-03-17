@@ -1,4 +1,4 @@
-part of 'router.dart';
+part of 'navigation.dart';
 
 const String splash = '/';
 const String list = 'list';

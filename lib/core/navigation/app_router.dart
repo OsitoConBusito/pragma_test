@@ -1,4 +1,4 @@
-part of 'router.dart';
+part of 'navigation.dart';
 
 final _key = GlobalKey<NavigatorState>();
 
