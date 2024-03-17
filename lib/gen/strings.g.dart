@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 8 (4 per locale)
+/// Strings: 10 (5 per locale)
 ///
-/// Built on 2024-03-16 at 22:44 UTC
+/// Built on 2024-03-17 at 04:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -151,6 +151,7 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	String hello({required Object name}) => 'Hello ${name}';
 	String get save => 'Save';
 	late final _StringsLoginEn login = _StringsLoginEn._(_root);
+	String get splash_title => 'Cats Breeds';
 }
 
 // Path: login
@@ -191,6 +192,7 @@ class _StringsEs implements Translations {
 	@override String hello({required Object name}) => 'Hola ${name}';
 	@override String get save => 'Guardar';
 	@override late final _StringsLoginEs login = _StringsLoginEs._(_root);
+	@override String get splash_title => 'Razas de gatos';
 }
 
 // Path: login
@@ -214,6 +216,7 @@ extension on Translations {
 			case 'save': return 'Save';
 			case 'login.success': return 'Logged in successfully';
 			case 'login.fail': return 'Logged in failed';
+			case 'splash_title': return 'Cats Breeds';
 			default: return null;
 		}
 	}
@@ -226,6 +229,7 @@ extension on _StringsEs {
 			case 'save': return 'Guardar';
 			case 'login.success': return 'Login Exitoso';
 			case 'login.fail': return 'Login fallido';
+			case 'splash_title': return 'Razas de gatos';
 			default: return null;
 		}
 	}

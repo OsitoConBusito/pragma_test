@@ -4,5 +4,6 @@
     "login": {
       "success": "Login Exitoso",
       "fail": "Login fallido"
-    }
+    },
+    "splash_title": "Razas de gatos"
   }

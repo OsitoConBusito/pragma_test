@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'theme.dart';
 
 class AppColors {
   static const darkBlue = Color(0xFF172026);
