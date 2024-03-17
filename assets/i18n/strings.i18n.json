@@ -7,5 +7,9 @@
       "fail": "Logged in failed"
     },
     "splash_title": "Cats Breeds",
-    "energy_level": "Energy level"
+    "energy_level": "Energy level",
+    "cat": "cat",
+    "weight": "weight:",
+    "origin": "origin:",
+    "detail_view": "Details"
   }

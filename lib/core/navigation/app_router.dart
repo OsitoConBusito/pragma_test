@@ -18,6 +18,15 @@ class AppRouter {
               path: list,
               name: list,
               builder: (context, state) => const ListScreen(),
+              routes: [
+                GoRoute(
+                  path: detail,
+                  name: detail,
+                  builder: (context, state) => DetailScreen(
+                    catBreedModel: state.extra as CatBreedModel,
+                  ),
+                )
+              ],
             ),
           ],
         ),

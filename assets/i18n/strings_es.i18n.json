@@ -6,5 +6,9 @@
       "fail": "Login fallido"
     },
     "splash_title": "Razas de gatos",
-    "energy_level": "Nivel de energia"
+    "energy_level": "Nivel de energia",
+    "cat": "gato",
+    "weight": "peso:",
+    "origin": "origen:",
+    "detail_view": "Detalles"
   }

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 12 (6 per locale)
+/// Strings: 20 (10 per locale)
 ///
-/// Built on 2024-03-17 at 18:57 UTC
+/// Built on 2024-03-17 at 22:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -153,6 +153,10 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final _StringsLoginEn login = _StringsLoginEn._(_root);
 	String get splash_title => 'Cats Breeds';
 	String get energy_level => 'Energy level';
+	String get cat => 'cat';
+	String get weight => 'weight:';
+	String get origin => 'origin:';
+	String get detail_view => 'Details';
 }
 
 // Path: login
@@ -195,6 +199,10 @@ class _StringsEs implements Translations {
 	@override late final _StringsLoginEs login = _StringsLoginEs._(_root);
 	@override String get splash_title => 'Razas de gatos';
 	@override String get energy_level => 'Nivel de energia';
+	@override String get cat => 'gato';
+	@override String get weight => 'peso:';
+	@override String get origin => 'origen:';
+	@override String get detail_view => 'Detalles';
 }
 
 // Path: login
@@ -220,6 +228,10 @@ extension on Translations {
 			case 'login.fail': return 'Logged in failed';
 			case 'splash_title': return 'Cats Breeds';
 			case 'energy_level': return 'Energy level';
+			case 'cat': return 'cat';
+			case 'weight': return 'weight:';
+			case 'origin': return 'origin:';
+			case 'detail_view': return 'Details';
 			default: return null;
 		}
 	}
@@ -234,6 +246,10 @@ extension on _StringsEs {
 			case 'login.fail': return 'Login fallido';
 			case 'splash_title': return 'Razas de gatos';
 			case 'energy_level': return 'Nivel de energia';
+			case 'cat': return 'gato';
+			case 'weight': return 'peso:';
+			case 'origin': return 'origen:';
+			case 'detail_view': return 'Detalles';
 			default: return null;
 		}
 	}
