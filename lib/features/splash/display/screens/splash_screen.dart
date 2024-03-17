@@ -1,48 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pragma_test/core/navigation/navigation.dart';
 import 'package:pragma_test/gen/strings.g.dart';
+import 'package:pragma_test/shared/widgets/widgets.dart';
 
 import 'package:pragma_test/theme/theme.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) async {
+        await Future.delayed(
+          const Duration(seconds: 2),
+          () => context.pushNamed(list),
+        );
+      },
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [
-                    AppColors.darkBlue,
-                    AppColors.green,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.3, 0.9]),
+      body: BackgroundWidget(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              t.splash_title,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  t.splash_title,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Gap(16),
-                Image.asset(AppImages.cat),
-              ],
-            ),
-          ),
-        ],
+            const Gap(16),
+            Image.asset(AppImages.cat),
+          ],
+        ),
       ),
     );
   }

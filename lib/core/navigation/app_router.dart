@@ -13,6 +13,13 @@ class AppRouter {
           path: splash,
           name: splash,
           builder: (context, state) => const SplashScreen(),
+          routes: [
+            GoRoute(
+              path: list,
+              name: list,
+              builder: (context, state) => const ListScreen(),
+            ),
+          ],
         ),
       ],
     ),

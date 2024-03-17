@@ -3,7 +3,7 @@ import 'package:pragma_test/core/connection/network_info.dart';
 import 'package:pragma_test/core/error/exceptions.dart';
 import 'package:pragma_test/core/error/failure.dart';
 import 'package:pragma_test/features/list/data/datasource/list_remote_datasource.dart';
-import 'package:pragma_test/features/list/domain/entities/cat_breed.dart';
+import 'package:pragma_test/features/list/data/models/cat_breed_model.dart';
 import 'package:pragma_test/features/list/domain/repositories/list_repository.dart';
 
 class ListRepositoryImpl implements ListRepository {
@@ -17,7 +17,7 @@ class ListRepositoryImpl implements ListRepository {
   final NetworkInfo networkInfo;
 
   @override
-  Future<Either<Failure, List<CatBreed>?>?> getCatBreeds() async {
+  Future<Either<Failure, List<CatBreedModel>?>?> getCatBreeds() async {
     if (await networkInfo.isConnected!) {
       try {
         final catBreeds = await remoteDataSource.getCatBreeds();

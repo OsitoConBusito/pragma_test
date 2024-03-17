@@ -19,7 +19,14 @@ class ListRemoteDataSourceImpl implements ListRemoteDataSource {
 
   @override
   Future<List<CatBreedModel>?> getCatBreeds() async {
-    final response = await dio.get(endpoint);
+    final response = await dio.get(
+      endpoint,
+      options: Options(
+        headers: {
+          'x-api-key': 'bda53789-d59e-46cd-9bc4-2936630fde39',
+        },
+      ),
+    );
     if (response.statusCode == HttpStatus.ok) {
       return CatBreedModel.fromList(response.data);
     } else {

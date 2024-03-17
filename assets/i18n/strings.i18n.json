@@ -6,5 +6,6 @@
       "success": "Logged in successfully",
       "fail": "Logged in failed"
     },
-    "splash_title": "Cats Breeds"
+    "splash_title": "Cats Breeds",
+    "energy_level": "Energy level"
   }
